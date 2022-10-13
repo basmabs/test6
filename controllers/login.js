@@ -14,7 +14,7 @@ exports.Login = async (req, res) => {
           email: trouve.email,
           userId: trouve._id
         }
-        const token = jwt.sign(data, process.env.JWT_SECRET, { expiresIn: '1h' });
+        const token = jwt.sign(data, process.env.JWT_SECRET, { expiresIn: '1d' });
         res.send({
           message: "token", token
         })
